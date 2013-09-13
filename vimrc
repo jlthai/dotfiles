@@ -45,3 +45,7 @@ set showmatch
 " Misc
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 set laststatus=2
+
+" OSX C-c and C-x
+vmap <C-x> :!reattach-to-user-namespace pbcopy<CR>
+vmap <C-c> :w !reattach-to-user-namespace pbcopy<CR><CR>
