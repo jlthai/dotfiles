@@ -8,3 +8,20 @@ bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 # Update default binding of 'Enter' to use copy-pipe
 unbind -t vi-copy Enter
 bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
+
+# C-z instead of C-b for prefix
+unbind C-b
+set -g prefix C-z
+
+# z is prefix
+bind z send-keys C-z
+
+# C-z is also last-window
+bind C-z last-window
+
+# misc
+bind | split-window -h
+
+# Better project name in status bar
+set -g status-left-length 18
+set -g status-left '#[fg=colour235,bg=colour76,bold] #S '
