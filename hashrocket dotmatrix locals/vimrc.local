@@ -23,3 +23,13 @@ vmap <C-c> :w !reattach-to-user-namespace pbcopy<CR><CR>
 
 " Improve the display of line wraps
 set showbreak=↪
+
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
+
+au BufNewFile,BufRead *.ejs set filetype=html

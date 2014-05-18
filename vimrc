@@ -31,3 +31,11 @@ filetype plugin on
 " OSX C-c and C-x
 vmap <C-x> :!reattach-to-user-namespace pbcopy<CR>
 vmap <C-c> :w !reattach-to-user-namespace pbcopy<CR><CR>
+
+" Improve the display of line wraps
+set showbreak=↪
+
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
