@@ -13,11 +13,19 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize path here 
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+# Customize path here
+export PATH=$HOME/.rbenv/bin:$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/Applications/MATLAB_R2014a.app/bin/
 
 # Auto ls -a after cd
 function chpwd() {
   emulate -L zsh
   ls
 }
+
+# rbenv
+eval "$(rbenv init -)"
+
+# Docker
+export DOCKER_HOST=192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/jlthai-ignite/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1

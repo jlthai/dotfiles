@@ -33,3 +33,18 @@ nnoremap <Down> :echoe "Use j"<CR>
 nnoremap <leader><leader> <c-^>
 
 au BufNewFile,BufRead *.ejs set filetype=html
+
+" Vertical and horizontal indicators
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
+set cursorline cursorcolumn
+
+" Visual mode colors
+hi Visual term=reverse cterm=reverse
+
+" Emmet settings
+let g:user_emmet_leader_key='<C-a>'
+let g:user_emmet_settings = { 'indentation' : '  ' }
+
+" C-n NERDTree
+map <C-n> :NERDTreeToggle<CR>
