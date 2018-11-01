@@ -21,3 +21,6 @@ function chpwd() {
   emulate -L zsh
   ls
 }
+
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
