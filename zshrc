@@ -118,7 +118,7 @@ function chpwd() {
   ls
 }
 
-# Allow rake task arguments to be passed in. ex: rake email:user[jimmy@zephlit.com]
+# Allow rake task arguments to be passed in. ex: rake email:user[email@address.com]
 unsetopt nomatch
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

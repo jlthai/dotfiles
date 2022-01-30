@@ -32,13 +32,6 @@ set listchars=eol:$
 " Highlight search matches
 set showmatch
 
-" Misc
-autocmd BufNewFile,BufRead Gemfile set filetype=ruby
-syntax on
-filetype plugin on
-set hidden
-set updatetime=300
-
 " OSX C-c and C-x
 vmap <C-x> :!reattach-to-user-namespace pbcopy<CR>
 vmap <C-c> :w !reattach-to-user-namespace pbcopy<CR><CR>
@@ -78,6 +71,16 @@ set cursorline
 " Disable script tag indent for vim-svelte
 let g:svelte_indent_script = 0
 
+" Color popup menu (autocomplete, errors, etc)
+highlight Pmenu guibg=#3c3836
+
+" Misc
+autocmd BufNewFile,BufRead Gemfile set filetype=ruby
+syntax on
+filetype plugin on
+set hidden
+set updatetime=300
+
 call plug#begin()
 Plug 'elixir-editors/vim-elixir'
 Plug 'evanleck/vim-svelte'
@@ -102,8 +105,11 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-ruby/vim-ruby'
+Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
+set termguicolors
+lua require'colorizer'.setup()
 
 " -- CoC config
 " Don't pass messages to |ins-completion-menu|.
