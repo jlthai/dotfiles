@@ -124,4 +124,11 @@ unsetopt nomatch
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-. $(brew --prefix asdf)/asdf.sh
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Activate asdf installed through brew
+#. $(brew --prefix asdf)/asdf.sh
+
+# Activate asdf downloaded through git
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
