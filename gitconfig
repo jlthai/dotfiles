@@ -1,6 +1,5 @@
 [init]
   defaultBranch = main
-  templatedir = ~/.git_template
 [push]
   default = current
 [color]
@@ -26,6 +25,7 @@
 [rebase]
   autosquash = true
 [include]
+  # Put your [user] name / email in here
   path = ~/.gitconfig.local
 [diff]
   colorMoved = zebra
